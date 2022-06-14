@@ -27,10 +27,10 @@ print(f'suma del segundo arreglo: {total}')
 print(f'promedio del segundo arreglo: {promedio}')
 print(f'numero Menor: {arregloA.min()}')
 print(f'numero Mayor: {arregloA.max()}')
-
+numeroMayor = arregloA.max()
 
 for i in range(len(arregloA)):
-    if arregloA[i] == arreglob[0]:
+    if arregloA[i] == numeroMayor:
         print(f"posicion NM= {i}")
 
     
