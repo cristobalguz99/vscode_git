@@ -1,5 +1,29 @@
 import os
 
+#sin argumentos y sin retorno
+def saludar():
+    input('Buenas Noches')
+
+#sin argumentos y sin retorno
+def sumar(): 
+    try:
+        a=int(input('ingrese un valor: '))
+        b=int(input('ingrese un valor: '))
+        c=a+b
+        return c
+    except Exception as e:
+        print(e)
+
+#con argumentos y sin retorno
+def sumar2(a,b): 
+    c=a+b
+    print(c)
+
+#con argumentos y con retorno
+def sumar3(a,b): 
+    c=a+b
+    return c
+
 
 
 def suma(a,b):
