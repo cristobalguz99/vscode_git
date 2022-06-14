@@ -1,3 +1,7 @@
+import os
+
+
+
 def suma(a,b):
     return a+b
 def multi(a,b):
@@ -11,3 +15,6 @@ def es_primo(num):
         if num % n == 0:
             return False
     return True
+
+def limpiarPantalla():
+    os.system('cls')

@@ -1,9 +1,8 @@
 import numpy as np
 import metodos as me
-import os  
 
+me.limpiarPantalla()
 
-os.system('cls')
 cont = 0
 impares = 0
 
