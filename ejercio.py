@@ -20,6 +20,6 @@ if n1.isnumeric() and n2.isnumeric():
 nombre=input("Ingrese su nombre: ")
 apellido=input("Ingrese su apellido: ")
 
-if nombre.isalpha() and apellido.isalpha():
-    met.introduction(first_name=nombre, last_name=apellido)
+if nombre.isalpha() and apellido.isalpha(): #no pesca espacios
+    met.introduction(first_name=nombre,last_name=apellido)
 
