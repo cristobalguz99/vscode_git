@@ -14,3 +14,9 @@ if n1.isnumeric() and n2.isnumeric():
     print('la suma de los numeros es: ',suma)
     multi=met.multi(n1,n2)
     print('la multiplicacion de los numeros es: ',multi)
+
+nombre=input("Ingrese su nombre: ")
+apellido=input("Ingrese su apellido: ")
+
+if nombre.isalpha() and apellido.isalpha():
+    met.introduction(first_name=nombre, last_name=apellido)
