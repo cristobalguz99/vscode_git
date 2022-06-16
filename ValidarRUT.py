@@ -42,6 +42,6 @@ def validarDV(rut):
             dv='k'#asignamos valor K
         else:
             dv=v5 #en cualquier otro caso asignar valor entregado
-        return dv #retornamos dv al usuario
+        return dv #retornamos resultado al usuario
     else:
         print('El rut ingresado no es valido')
