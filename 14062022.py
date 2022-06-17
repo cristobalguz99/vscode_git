@@ -8,3 +8,6 @@ rut = input("Ingrese un rut sin digito verificador: ")
 dv= me.validarDV(rut)
 
 print(f'El digito verificador del rut {rut} es {dv}')
+
+numero=input('Ingrese numero mi rey: ')
+me.fibonacci(numero)

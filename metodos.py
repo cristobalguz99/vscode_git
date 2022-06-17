@@ -1,5 +1,6 @@
 import os
-from traceback import print_tb
+from re import X
+from tracemalloc import start
 import numpy as np
 
 #sin argumentos y sin retorno
@@ -89,3 +90,27 @@ def validarDV(rut):
         return dv #retornamos dv al usuario
     else:
         print('El rut ingresado no es valido')
+
+def fibonacci(sec):  
+
+    if sec.isnumeric():
+        sec=int(sec)
+        secs=[]
+        aux=0
+        x=0
+        y=1
+        for i in range(sec):
+            if sum(secs)<2:
+                secs.append(1)
+            elif i==2:
+                aux=sum(secs)
+                secs.append(aux)
+            else:
+                x=secs[i-1]
+                y=secs[i-2]
+                aux=x+y
+                secs.append(aux)
+            print(secs)
+
+
+            
