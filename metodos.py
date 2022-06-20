@@ -25,11 +25,6 @@ def sumar3(a,b):
     c=a+b
     return c
 
-def suma(a,b):
-    return a+b
-def multi(a,b):
-    return a*b
-
 def introduction(first_name, last_name):
     print("Hola, mi nombre es", first_name, last_name)
 
@@ -71,8 +66,7 @@ def validarDV(rut):
     else:
         print('El rut ingresado no es valido')
 
-def fibonacci(sec):  
-
+def fibonacci(sec):
     if sec.isnumeric():
         sec=int(sec)
         secs=[]
@@ -90,4 +84,4 @@ def fibonacci(sec):
                 y=secs[i-2]
                 aux=x+y
                 secs.append(aux)
-            print(secs)           
+            print(secs)
