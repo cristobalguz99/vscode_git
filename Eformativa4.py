@@ -40,11 +40,17 @@ def RegistroUsuario():
                     DatosUsuarios=[nombres,ruts,telefonos,bancos]
                     return('Registro Completado con exito')
                 else:
-                    print('un dato esta mal ingresado')
+                    print('Un dato esta mal ingresado')
             except Exception as e:
                 print('Ha ocurrido un error favor volver a ingresar el registro', e)
         else:
             return('Usuario ya se encuentra registrado')
+
+def ValidarUsuario():
+    rut=input('Ingrese rut del usuario: ')
+    exist=ruts.count(rut)
+    if exist!=0:
+        
 
 algo=llenarAsientos()
 print('==================================')
