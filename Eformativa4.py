@@ -47,6 +47,18 @@ def RegistroUsuario():
             return('Usuario ya se encuentra registrado')
 
 algo=llenarAsientos()
+print('==================================')
+while True:
+    me.limpiarPantalla()
+    sel=input('MENU\n 1) Registrar Usuario\n 2) Iniciar Sesion\n 3) Cerrar\n ingrese un opcion: ')
+    if sel=='1':
+        reg=RegistroUsuario()
+        print(reg)
+        input(f'Presiones cualquier tecla para continuar')
+    elif sel=='2':
+        pass
+    else:
+        break
 
 algo=algo.astype(str)
 print(algo)
