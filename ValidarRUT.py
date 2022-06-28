@@ -1,47 +1,39 @@
 import numpy as np
+import metodos as met
 def validarDV(rut):
-    #creacion de lista
-    ruts=list() 
-    #creacion de variables a usar
+    ruts=list()
     suma=0
-    c=2 #contador
-    #validacion numerico
+    c=2
     if rut.isnumeric():
-        #recorrer numero a numero
         for i in rut:
-            #guardar numero en lista
             ruts.append(int(i))
-        #transformamos lista en array
         lista=np.array(ruts)[::-1]
-        #recorrer segun largo de rut
         for i in range(len(rut)):
-            #guardar resultado
             suma+=int(lista[i])*c 
-            #validar si es mayor que 7
             if c<7:
-                #sumar 1 al contador
                 c+=1
             else: 
-                #volver a asignar valor predeterminado
                 c=2 
-        #dividir suma total por 11  
-        v2=suma / 11
-        #transformar variable a entero
-        v2=int(v2)
-        #multiplicar resultado po 11
-        v3=v2*11
-        #restar suma a varible v3
-        v4=suma-v3
-        #restamos 11 a v4
-        v5=11-v4
-        #validamos si resultado es 11
-        if int(v5)==11:            
-            dv=0 #asignamos valor 0
-        #validamos si resultado es 10
-        elif int(v5)==10: 
-            dv='k'#asignamos valor K
-        else:
-            dv=v5 #en cualquier otro caso asignar valor entregado
-        return dv #retornamos resultado al usuario
+        dv=suma / 11
+        dv=int(dv)
+        dv=dv*11
+        dv=suma-dv
+        dv=11-dv
+        if int(dv)==11:            
+            dv=0
+        elif int(dv)==10: 
+            dv='k'
+        return dv
     else:
         print('El rut ingresado no es valido')
+met.limpiarPantalla()
+rut = input('Ingrese rut sin punto y con guion ej:111111-1: ')
+try:
+    num=rut.split('-')
+    dv=validarDV(num[0])
+    if str(dv)==num[1]:
+        print(f'El rut {rut} es correcto')
+    else:
+        print(f'El rut {rut} no es correcto')
+except Exception as e:
+    print('rut mal ingresado')

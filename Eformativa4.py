@@ -24,7 +24,7 @@ def llenarAsientos():
 
 def RegistroUsuario():
     while True:
-        me.limpiarPantalla()
+        #me.limpiarPantalla()
         nombre=input('Ingrese nombre del usuario: ')
         rut=input('Ingrese rut del usuario: ')
         exist=ruts.count(rut)
@@ -59,13 +59,6 @@ while True:
         pass
     else:
         break
-
-algo=algo.astype(str)
-print(algo)
-
-algo=algo.astype(int)
-print(algo)
-
 print('==================================')
 while True:
     #me.limpiarPantalla()
