@@ -2,6 +2,7 @@ from operator import concat
 import numpy as np
 asientos=np.ones((7,6))
 asientos=asientos.astype(str)
+
 def llenarAsientos(): 
     r=0
     c=0
@@ -49,4 +50,3 @@ if seleccion.isnumeric():
     c,x=np.where(buscarasi == int(seleccion))
     asientos[c,x]
     print(c,x)
-
