@@ -1,4 +1,4 @@
-ALTER SESSION set NLS_DATE_FORMAT = 'DD-MM-YYYY'
+ALTER SESSION set NLS_DATE_FORMAT = 'DD-MM-YYYY';
 
 CREATE TABLE tipo_beneficio (
     id_tipo_beneficio NUMBER NOT NULL,

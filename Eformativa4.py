@@ -57,17 +57,5 @@ while True:
         input(f'Presiones cualquier tecla para continuar')
     elif sel=='2':
         pass
-    else:
-        break
-print('==================================')
-while True:
-    #me.limpiarPantalla()
-    sel=input('MENU\n 1) Registrar Usuario\n 2) Iniciar Sesion\n 3) Cerrar\n ingrese un opcion: ')
-    if sel=='1':
-        reg=RegistroUsuario()
-        print(reg)
-        input(f'Presiones cualquier tecla para continuar')
-    elif sel=='2':
-        pass
-    else:
+    elif sel=='3':
         break

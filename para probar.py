@@ -1,8 +1,9 @@
 from operator import concat
+from select import select
 import numpy as np
+
 asientos=np.ones((7,6))
 asientos=asientos.astype(str)
-
 def llenarAsientos(): 
     r=0
     c=0
@@ -32,7 +33,6 @@ asientos = llenarAsientos()
 buscarasi=asientos.astype(int)
 
 print(asientos)
-print(buscarasi)
 seleccion = input('Ingrese el asiento que desea comprar: ')
 if seleccion.isnumeric():
     if int(seleccion)<10:
@@ -48,5 +48,10 @@ if seleccion.isnumeric():
 seleccion = input('Ingrese el asiento que desea eliminar: ')
 if seleccion.isnumeric():
     c,x=np.where(buscarasi == int(seleccion))
-    asientos[c,x]
+    asientos[c,x]=seleccion
+    print(asientos)
+
     print(c,x)
+
+
+
