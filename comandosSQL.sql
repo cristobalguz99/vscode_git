@@ -422,6 +422,12 @@ INSERT INTO tipo_pago VALUES (2,'Transferencia');
 INSERT INTO tipo_pago VALUES (3,'Deposito');
 INSERT INTO tipo_pago VALUES (4,'Cheque');
 
+
+INSERT INTO formas_pago VALUES (1,'Efectivo');
+INSERT INTO formas_pago VALUES (2,'Transferencia');
+INSERT INTO formas_pago VALUES (3,'Deposito');
+INSERT INTO formas_pago VALUES (4,'Cheque');
+
 INSERT INTO banco VALUES (1,'Banco Estado');
 INSERT INTO banco VALUES (2,'Banco de Chile');
 INSERT INTO banco VALUES (3,'Banco Santander');
@@ -446,3 +452,20 @@ INSERT INTO beneficio VALUES (2,'Estar estudiando','Beneficio para todas las per
 INSERT INTO beneficio VALUES (3,'Tener un ñuñuki', 'Beneficio que se le otorga a las persona por tener auto feo',50,3);
 
 INSERT INTO persona VALUES (1,'','18829876','1','Cristian', '','Mardones','','xxxxx','22-05-2022','cr.mardones@duocuc.cl',1000000, 1,123,1,1,2,1,1);
+
+INSERT INTO telefono VALUES (1,956520050,1,1);
+INSERT INTO telefono VALUES (1,228578738,2,1);
+
+INSERT INTO vehiculo VALUES (1,'Susuki','S-presso','qwer12',1,'Naranjo','123456','123456',2,1);
+
+INSERT INTO pago VALUES (1,'09-07-2022',6000,1,NULL,NULL,1);
+
+INSERT INTO carga VALUES (1,'alguien','','aaaaaaaa','',11111111111,'1',1,1,1,1);
+
+INSERT INTO persona_discapacidad VALUES (2,1);
+
+INSERT INTO beneficio_vehiculo VALUES (3,1);
+
+INSERT INTO persona_beneficio VALUES (1,'09-07-2022',3,1);
+
+

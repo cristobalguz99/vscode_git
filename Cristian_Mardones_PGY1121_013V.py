@@ -125,23 +125,25 @@ def mostrarAsistentes():
         print('A ocurrido un error esto puede deber a que no se han registrado datos :D', e)
 
 def CalcularMontoFinal():
-    try:        
+    try:
+        p=0;cp=0;g=0;cg=0;s=0;cs=0
         c=len(ruts)
         for i in range(c):
             if tipos[i]=='Platinum':
-                p=+1
-                cp=+valores[i]
+                p=p+1
+                cp=cp+valores[i]
             elif tipos[i]=='Gold':
-                g=+1
-                cg=+valores[i]
+                g=g+1
+                cg=cg+valores[i]
             elif tipos[i]=='Silver':
-                s=+1
-                cs=+valores[i]
-        print('========Valores Totales========')
-        print(f'Platinum 120000 cantidad: {p} total: {cp}')
-        print(f'Gold 80000 cantidad: {g} total: {cg}')
-        print(f'Silver 50000 cantidad: {s}total: {cs}')
-        input('')
+                s=s+1
+                cs=cs+valores[i]
+        print('======== Valores Totales ========')
+        print(f'Platinum    120000  cantidad: {p} total: {cp}')
+        print(f'Gold        80000   cantidad: {g} total: {cg}')
+        print(f'Silver      50000   cantidad: {s} total: {cs}')
+        print('======== *************** ========')
+        input('Presione Cualquier tecla para salir')
     except Exception as e:
         print('A ocurrido un error, puede deberse a que no se han ingresado datos al sistema',e)
 menu()
