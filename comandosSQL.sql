@@ -454,11 +454,11 @@ INSERT INTO beneficio VALUES (3,'Tener un ñuñuki', 'Beneficio que se le otorga
 INSERT INTO persona VALUES (1,'','18829876','1','Cristian', '','Mardones','','xxxxx','22-05-2022','cr.mardones@duocuc.cl',1000000, 1,123,1,1,2,1,1);
 
 INSERT INTO telefono VALUES (1,956520050,1,1);
-INSERT INTO telefono VALUES (1,228578738,2,1);
+INSERT INTO telefono VALUES (2,228578738,2,1);
 
 INSERT INTO vehiculo VALUES (1,'Susuki','S-presso','qwer12',1,'Naranjo','123456','123456',2,1);
 
-INSERT INTO pago VALUES (1,'09-07-2022',6000,1,NULL,NULL,1);
+INSERT INTO pago VALUES (1,'09-07-2022',6000,1,1,NULL,NULL,1);
 
 INSERT INTO carga VALUES (1,'alguien','','aaaaaaaa','',11111111111,'1',1,1,1,1);
 
