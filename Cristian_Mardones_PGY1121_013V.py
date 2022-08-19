@@ -98,6 +98,7 @@ def selecionarasientos():
             seleccion=int(seleccion)
             if seleccion>0 and seleccion<101:
                 c,x=np.where(buscarasi == seleccion)
+                print(c,x)
                 if asientos[c,x]=='XX':
                     print('Asiento ya se encuentra usado')
                 else:
@@ -113,6 +114,7 @@ def eliminarasiento():
     if seleccion.isnumeric():
         c,x=np.where(buscarasi == int(seleccion))
         asientos[c,x]=seleccion
+        print(c,x)
         print(asientos)
 
 def mostrarAsistentes():

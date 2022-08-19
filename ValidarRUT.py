@@ -29,9 +29,18 @@ def validarDV(rut):
 met.limpiarPantalla()
 rut = input('Ingrese rut sin punto y con guion ej:111111-1: ')
 try:
-    num=rut.split('-')
-    dv=validarDV(num[0])
-    if str(dv)==num[1]:
+    result=rut.find("-")
+    if result!=-1:
+        num=rut.split('-')
+        xdv=validarDV(num[0])
+        dv=num[1]
+    else:
+        dv=rut[-1]
+        rut=rut[0:len(rut)-1]
+        print(rut)
+        xdv=validarDV(rut)
+        input    
+    if str(xdv)==dv:
         print(f'El rut {rut} es correcto')
     else:
         print(f'El rut {rut} no es correcto')
