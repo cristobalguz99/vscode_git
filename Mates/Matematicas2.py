@@ -37,21 +37,25 @@ def matrices4():
 
 def matrices5():
     V = np.zeros((8,9))
-    print(V)
-
     for i in range(len(V)):
         for j in range(len(V[0])):
             V[i][j]=8*(i+1)+12*(j+1)
-    print(V)
+
+    N=np.fromfunction(lambda i, j: 8*(i+1)+12*(j+1), (8, 9), dtype=int)
+    print(N)
 
 def matrices6():
-    V = np.zeros((8,9))
-    print(V)
+    A = np.zeros((5,7))
+    B = np.zeros((7,5))
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            A[i][j]=(i+1)*(j+1)
+    for i in range(len(B)):
+        for j in range(len(B[0])):
+            B[i][j]=15*(i+1)-2*(j+1)
+    print(A)
+    print(B)
 
-    for i in range(len(V)):
-        for j in range(len(V[0])):
-            V[i][j]=8*(i+1)+12*(j+1)
-    print(V)
+    C=()
 
-
-matrices5()
+matrices6()
