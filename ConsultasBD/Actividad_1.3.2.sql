@@ -39,3 +39,16 @@ FROM CAMION
 ORDER BY "AÑO" DESC,NRO_PATENTE ASC;
 
 --CASO 5
+
+SELECT TO_CHAR(SYSDATE,'mm/yyyy') AS "FECHA DE PROCESO",
+nro_patente,
+fecha_ini_arriendo,
+dias_solicitados,
+fecha_devolucion,
+to_date(fecha_devolucion)-(fecha_ini_arriendo+DIAS_SOLICITADOS) as "dias atrasos",
+(to_date(fecha_devolucion)-(fecha_ini_arriendo+DIAS_SOLICITADOS))*25500 as MULTA
+FROM ARRIENDO_CAMION
+WHERE EXTRACT(MONTH FROM FECHA_DEVOLUCION)=7
+AND (to_date(fecha_devolucion)-(fecha_ini_arriendo+DIAS_SOLICITADOS))*25500 > 0
+AND EXTRACT(YEAR FROM FECHA_DEVOLUCION)=2022
+ORDER BY FECHA_INI_ARRIENDO,NRO_PATENTE;
