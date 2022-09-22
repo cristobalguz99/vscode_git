@@ -1,6 +1,9 @@
+from decimal import Decimal
 from lib2to3.pgen2.token import DOT
 from operator import matmul
+from tokenize import Double
 from turtle import dot
+from unicodedata import decimal
 import numpy as np
 import os
 
@@ -76,5 +79,27 @@ def multiplyMatriz5():
     print(T[1-1][4-1])
     print(C[5-1][2-1])
     print(G[3-1][5-1])
-multiplyMatriz5()
+
+def multiplyMatriz6():
+    A=np.fromfunction(lambda i, j: 20*(i+1)*(j+1), (15, 10), dtype=int)
+    E=np.fromfunction(lambda i, j: 4*(i+1)+(j+1), (10, 5), dtype=int)  
+    print(A,"\n",E)
+    M = np.matmul(A,E)
+
+    print(M)
+
+    print(f'inversionista 14 tiene {A[14-1][10-1]} acciones del tipo 10')
+    print(M[8-1][3-1])
+
+def multiplyMatriz7():
+    
+    M=np.array([[4.04,0.39],[69,4],[61,2],[804,66],[73,11]]).astype(Decimal)
+    G=np.array([[30,45,50],[45,60,75]])
+    print(M,"\n",G)
+
+    R=np.matmul(M,G)
+    print(R)
+    print(R[2-1][1-1])
+    print(R[5-1][3-1])
+multiplyMatriz7()
 
