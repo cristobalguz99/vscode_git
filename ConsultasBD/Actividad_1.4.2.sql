@@ -8,7 +8,7 @@ FROM cliente
 ORDER BY COMUNA ASC, APPATERNO_CLI DESC;
 
 --CASO 2
-SELECT 'El empleado '|| PNOMBRE_EMP||' '||APPATERNO_EMP||' '||APMATERNO_EMP || ' estuvo de cumplaños el ' || EXTRACT(DAY FROM fecha_nac) ||' de '|| TO_CHAR(fecha_nac,'month') || ' Cumplio ' ||  trunc((sysdate-fecha_nac)/365) || ' años.' AS "LISTADO DE CUMPLEAÑOS"
+SELECT 'El empleado '|| PNOMBRE_EMP||' '||APPATERNO_EMP||' '||APMATERNO_EMP || ' estuvo de cumplaños el ' || EXTRACT(DAY FROM fecha_nac) ||' de '|| concat(trim(TO_CHAR(fecha_nac,'month')),'.') || ' Cumplio ' ||  trunc((sysdate-fecha_nac)/365) || ' años.' AS "LISTADO DE CUMPLEAÑOS"
 FROM EMPLEADO
 WHERE EXTRACT(MONTH FROM FECHA_NAC)=7
 ORDER BY EXTRACT(DAY FROM FECHA_NAC),APPATERNO_EMP ASC;

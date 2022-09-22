@@ -1,4 +1,5 @@
 from lib2to3.pgen2.token import DOT
+from operator import matmul
 from turtle import dot
 import numpy as np
 import os
@@ -30,5 +31,50 @@ def multiplyMatriz2():
 
     print(f'C[1][1] Corresponde a :\nEn enero se utilizo {C[1-1][1-1]}Kg de acero para ambos modelos')
 
-#multiplyMatriz2()
+def multiplyMatriz3():
+    A=np.array([[1300,900,800],[2100,1700,1500],[1500,1200,900]])
+    B=np.array([[3600,900,1500]])
+
+    print(A,"\n\n",B,"\n")
+
+    C=np.matmul(B,A)
+    print(C)
+
+def multiplyMatriz4():
+    M=np.array([[9,14],[4,5]])
+    Q=np.array([[200,240,220],[175,210,215]])
+
+    print(M,"\n",Q)
+
+    G=np.matmul(M,Q)
+    #H=np.matmul(Q,M)
+
+    print(G)
+
+    print(G[2-1][3-1])
+
+def multiplyMatriz4():
+    M=np.array([[9,14],[4,5]])
+    Q=np.array([[200,240,220],[175,210,215]])
+
+    print(M,"\n",Q)
+
+    G=np.matmul(M,Q)
+    #H=np.matmul(Q,M)
+
+    print(G)
+
+    print(G[2-1][3-1])
+
+def multiplyMatriz5():
+    T=np.fromfunction(lambda i, j: 100*(i+1)*(j+1), (4, 5), dtype=int)
+    C=np.fromfunction(lambda i, j: 3*(i+1)+5*(j+1), (5, 6), dtype=int)  
+    print(T,"\n",C)
+
+    G=np.matmul(T,C)
+    print(G)
+    print(T[1-1][4-1])
+    print(C[5-1][2-1])
+    print(G[3-1][5-1])
+multiplyMatriz5()
 
