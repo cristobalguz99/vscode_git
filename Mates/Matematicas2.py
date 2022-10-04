@@ -1,3 +1,4 @@
+from tokenize import Double
 import numpy as np
 import os
 
@@ -58,4 +59,18 @@ def matrices6():
 
     C=()
 
-matrices6()
+def matrices7():
+    M=np.fromfunction(lambda i, j: 1+(j+1)/(2*(i+1)), (2, 3),dtype=int)
+    P=np.fromfunction(lambda i, j: 210+20*(i+1)+10*(j+1), (3, 4),dtype=int)
+    T=np.matmul(M,P)
+    print(M)
+    print(P)
+    print(T,'\n total de material de todos los modelos en el mes')
+
+def matrices8():
+    A = np.array([[3,6,8],[7,10,9]])
+    B=np.transpose(A)
+
+
+    print(B[2-1][1-1])
+matrices8()

@@ -1,5 +1,8 @@
+from asyncore import read, write
 import math
 import os
+from pickle import APPEND
+from subprocess import call
 from unittest import result
 ##logaritmo
 ##x=math.log(17.0859375)/math.log(1.5)
@@ -180,6 +183,10 @@ def sumatorias11():
     result2=a1*(r**n2-1)/(r-1)
     total=result1-result2
     print(f"La resta entre {result1} y {result2} es {total}")
+
+def Geometrica1():
+
+    scan('r')
 #Sumatorias1()
 #Sumatorias2()
 #Sumatorias3()              
@@ -190,6 +197,7 @@ def sumatorias11():
 #Sumatorias8()
 #Sumatorias9()
 #sumatorias10()
-sumatorias11()
+#sumatorias11()
 #cuadratica()
+Geometrica1()
 #Razon_Geometrica()
